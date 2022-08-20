@@ -12,3 +12,9 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+
+let data = sessionStorage.getItem('clave')
+if ((data) != 'logueado') {
+    
+    window.location ="login.html"
+}
