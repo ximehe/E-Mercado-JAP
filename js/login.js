@@ -6,7 +6,7 @@ document.getElementById("ok").addEventListener("click", function(){
    if ((email && (password.length > 5))){
         window.location = "index.html";
     } else {
-        alert("Faltan datos.")
+        alert("No se pudo ingresar, revise si todos los espacios están llenos o si la contraseña tiene 6 o más caracteres ")
         window.location = "login.html";
     }
 
