@@ -17,4 +17,7 @@ let data = sessionStorage.getItem('clave')
 if ((data) != 'logueado') {
     
     window.location ="login.html"
+}  else
+{
+    document.getElementById('user').innerHTML=localStorage.getItem('userLog');
 }
