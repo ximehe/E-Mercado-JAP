@@ -1,13 +1,14 @@
-const URL = "https://japceibal.github.io/emercado-api/cats_products/101.json";
-
-fetch(URL)
+document.addEventListener("DOMContentLoaded",function (e) {
+    fetch(PRODUCTS_URL + localStorage.getItem('catID') + EXT_TYPE)
 .then( respuesta => respuesta.json() )
 .then( data => {
 
     const ArrayDatos = data;
-    showList(ArrayDatos);
+    document.getElementById('cat-name').innerHTML=ArrayDatos.catName
+    showList(ArrayDatos).products;
 
-} )
+})
+})
 
 
 function showList(array){
