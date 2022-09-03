@@ -50,11 +50,12 @@
         <h3> Verás aquí todos los productos de la categoría <samp id="cat-name"></samp> </h3>
         <br>
       </div>
-      
+         
          <div class="container">
         <div class="row">
           <div class="col text-end">
             <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+              //Filtros de Orden ascendene y descendente por el precio y filtro por el orden descendente según la relevancia
               <input type="radio" class="btn-check" name="options" id="ordenAscPrecio" checked>
               <label class="btn btn-light" for="ordenAscPrecio">$->$$</label>
               <input type="radio" class="btn-check" name="options" id="ordenDescPrecio" checked>
@@ -70,6 +71,7 @@
               <div class="col">
                 <p class="font-weight-normal text-end my-2">Precio</p>
               </div>
+              //minimo y maximo de precio
               <div class="col">
                 <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
               </div>
@@ -78,6 +80,7 @@
               </div>
               <div class="col-3 p-0">
                 <div class="btn-group" role="group">
+                  //Botones de filtrar y limpiar
                   <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
                   <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
                 </div>
