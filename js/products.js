@@ -1,4 +1,4 @@
-//Definición de constantes y variables
+
 const ORDER_ASC_BY_PRICE = "$->$$";
 const ORDER_DESC_BY_PRICE = "$$->$";
 const ORDER_DESC_BY_RELEV = "-->"
@@ -6,7 +6,7 @@ let FiltroArray=[];
 let min=0;
 let max=0;
 
-//Función para filtrar el arreglo según el criterio 
+ 
 function sortAndShowCategories(criterio, array){
     if (criterio === ORDER_ASC_BY_PRICE){
        
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",function (e) {
  
 
 
-//Función para mostrar todos los productos con sus características
+
 function showList(array){
     
     array.forEach(element => {
