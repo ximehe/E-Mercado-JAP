@@ -47,24 +47,23 @@ function showList(array){
     array.forEach(element => {
 
         if (((min == 0) || (parseInt(element.cost) >= min)) && ((max==0) || (parseInt(element.cost)<= max))){
-            var elementHTML = ` <div class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + element.image + `" alt="product image" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <div class="mb-1">
-                        <h4>`+ element.name + " " + element.currency + "-" + element.cost +`</h4> 
-                        <p> `+ element.description +`</p> 
-                        
-                        </div>
-                        <small class="text-muted">` + element.soldCount + ` artículos</small> 
-                    </div>
-
-                </div>
+            var elementHTML = 
+          `
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm custom-card cursor-active">
+               <div class="list-group-item list-group-item-action" onclick="guardarID(${element.id})">
+              <img class="bd-placeholder-img card-img-top" src="` + element.image + `" alt="product image" class="img-thumbnail">
+              <h4 class="m-3" align="center">`+ element.name +`</h4> 
+              <p class="m-2"> `+ element.description +`</p>
+              
+                <div class="card-body">
+              <small class="text-muted" style="float:left">` + element.soldCount + ` artículos</small> 
+              <h5 class="m-1" align="right"> `  + element.currency + " "+ element.cost + `</h5>
+                </div> 
+              
+               </div>
             </div>
-        </div>
+         </div>
         `
         
         document.getElementById("info").innerHTML += elementHTML; 
@@ -76,6 +75,10 @@ function showList(array){
     });                              
 }
 
+function guardarID(id) {
+    localStorage.setItem("claveID", id);
+    window.location = "product-info.html";
+  }
 
 document.getElementById("ordenAscPrecio").addEventListener("click",function(){
     sortAndShowCategories(ORDER_ASC_BY_PRICE, FiltroArray);
