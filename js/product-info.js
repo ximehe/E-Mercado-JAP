@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     .then(data => {
       product = data;
       MostrarProductoInfo(product);
-      console.log(PRODUCT_INFO_URL + localStorage.getItem('claveID') + EXT_TYPE)
+      
     })
   
     fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.getItem('claveID') + EXT_TYPE)
