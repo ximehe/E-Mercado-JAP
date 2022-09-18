@@ -38,10 +38,58 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      
+      
+      <br>
+      <div id="InfoProducto">
       </div>
+      <hr class="my-3">
+      
+      <div id="Comentarios">
+        <h2>Comentarios</h2>
+        <hr class="my-3">
+        <br>
+      </div>
+      <br>
+
+        <div>
+        <h2>Deja tu comentario!</h2>
+       <br>
+          <label>Califica del 1 al 5:</label>
+        <div>
+          <i class="fas fa-star" ></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+
+        <select id="puntuacion" name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <br>
+        <br>
+        <label>Dejanos aquí tu opinión del producto:</label>
+        <br>
+        <textarea class="form-control" id="miComentario" name="comentario" placeholder="Escribe aquí tu comentario." rows="4" cols="20" required></textarea>   
+        <br>
+        
+        <button onclick="añadirComentario()" class="btn btn-primary">Enviar</button>
+        
+      </div>
+
+        </div>
+      
+      
     </div>
+    
+    
+    
+    
   </main>
   <footer class="text-muted">
     <div class="container">
