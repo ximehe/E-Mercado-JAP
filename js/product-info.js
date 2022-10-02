@@ -87,6 +87,25 @@ document.addEventListener("DOMContentLoaded", () =>{
     return starsHTML;
   }
 
+//Funcion para mostrar productos relacionados 
+function MostrarProductosRelacionados(array){
+
+    array.forEach(element => {
+      let elementHTML = `
+     <div class="card col-6">
+       <div class="card-header text-center" onclick="guardarID(${element.id})">
+         <img src="${element.image}" style="width: 100%;">
+       </div>
+       <div class="card-body">
+         <h5 class="card-title">${element.name}</h5>
+         
+       </div>
+     </div>
+     `
+     document.getElementById("ProductosRelacionados").innerHTML += elementHTML;
+  });
+}
+
   
   //Funcion para mostrarComentarios
   function mostrarComentarios(comments){
