@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     .then(data => {
       product = data;
       MostrarProductoInfo(product);
+      MostrarProductosRelacionados(product.relatedProducts);
       
     })
   
@@ -105,6 +106,11 @@ function MostrarProductosRelacionados(array){
      document.getElementById("ProductosRelacionados").innerHTML += elementHTML;
   });
 }
+
+ function guardarID(id) {
+    localStorage.setItem("claveID", id);
+    window.location = "product-info.html";
+  }
 
   
   //Funcion para mostrarComentarios
