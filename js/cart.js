@@ -109,6 +109,7 @@ function MetodoDePago(){
  
    }
 
+  checkModal();
   MensajeDeExito();
   
 }
