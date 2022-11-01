@@ -1,13 +1,5 @@
-### Mi proyecto e-commerce de JAP
+### ✨✨  Mi proyecto e-commerce de JAP  ✨✨
 
-
-<!--
-**ximehe/ximehe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-: ...
--->
 El presente proyecto se enmarca en la necesidad de empezar a adaptar la dinámica del trabajo en una empresa de desarrollo de software. Será esa una circunstancia en
 la que se encuentre probablemente un equipo de trabajo y un proyecto ya en desarrollo, y deba asumir la responsabilidad de agregar o modificar, algunas funcionalidades específicas. Del mismo modo, y asumiendo la misma dinámica, fueron establecidas las fechas de las entregas y el formato de los archivos a entregar.
 
