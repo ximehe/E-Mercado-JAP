@@ -21,21 +21,27 @@ El equipo de desarrollo, ya tiene buena parte del proyecto en funcionamiento, pe
 
 Si bien la plataforma trata sobre compra y venta de bienes de cualquier tipo, nos concentramos únicamente en las características y funcionalidades con las que deberá contar e-mercado para los COMPRADORES. Los mismos deberán poder: 
 
-○ Hacer el login en el sitio, a través de un email y una contraseña.
-○ Acceder y poder modificar sus datos de perfil.
-○ Ver un listado de las categorías de productos, y poder acceder a cada una de
-ellas. Además, filtrar y ordenar dicho listado según la cantidad de artículos en
-cada una.
-○ Ver un listado de los productos pertenecientes a una categoría, y poder acceder
-a cada uno de ellos. Además, filtrar y ordenar dicho listado precio y relevancia.
-○ Ver la información de un producto, su precio, descripción, cantidad vendida del
-mismo, imágenes, etc.
-○ Ver los comentarios hechos por otros usuarios sobre un producto, así como su
-calificación y fecha.
-○ Realizar un comentario, y dar una calificación a un producto.
-○ Ver los productos relacionados a un producto.
-○ Añadir un producto al carrito de compras.
-○ Visualizar su carrito de compras con los productos precargados y el cálculo de
+📌 Hacer el login en el sitio, a través de un email y una contraseña.
+
+📌Acceder y poder modificar sus datos de perfil.
+
+📌Ver un listado de las categorías de productos, y poder acceder a cada una de ellas. Además, filtrar y ordenar dicho listado según la cantidad de artículos en cada una.
+
+📌 Ver un listado de los productos pertenecientes a una categoría, y poder acceder a cada uno de ellos. Además, filtrar y ordenar dicho listado precio y relevancia.
+
+📌 Ver la información de un producto, su precio, descripción, cantidad vendida del mismo, imágenes, etc.
+
+📌 Ver los comentarios hechos por otros usuarios sobre un producto, así como su calificación y fecha.
+
+📌 Realizar un comentario, y dar una calificación a un producto.
+
+📌 Ver los productos relacionados a un producto.
+
+📌 Añadir un producto al carrito de compras.
+
+📌 Visualizar su carrito de compras con los productos precargados y el cálculo de
 los totales.
-○ Seleccionar un tipo de envío, dirección y forma de pago, para su compra.
-○ Comprar
+
+📌 Seleccionar un tipo de envío, dirección y forma de pago, para su compra.
+
+📌 Comprar
