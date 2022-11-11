@@ -6,6 +6,7 @@ let email = document.getElementById("email");
 let contact = document.getElementById("contactNumber");
 let profilePic = document.getElementById("profilePic");
 
+profilePic.src="./img/img_perfil.png"
 
 function guardarCambios(){
 
@@ -20,10 +21,10 @@ function guardarCambios(){
     
     }
 
-    if(!(localStorage.getItem("newImage") === "")){
-        localStorage.setItem("profilePic", localStorage.getItem("newImage"));
-        localStorage.setItem("newImage","");
-      }else{}
+    if(!(localStorage.getItem("Image") === "")){
+        localStorage.setItem("profilePic", localStorage.getItem("Image"));
+        localStorage.setItem("Image","");
+      }
 
 }
 
@@ -41,7 +42,19 @@ function mostrarDatos(){
   }
   mostrarDatos(); 
 
-(function () {
+
+  function leerURL(img){
+    const reader = new FileReader();
+  
+    reader.addEventListener("load", () =>{
+      localStorage.setItem("Image", reader.result);
+      profilePic.src = reader.result;
+    })
+  
+    reader.readAsDataURL(img.files[0]);
+  }
+
+  (function () {
     'use strict' 
   var forms = document.querySelectorAll('.needs-validation')
   Array.prototype.slice.call(forms)
@@ -55,16 +68,3 @@ function mostrarDatos(){
   }, false)
   });
   })()
-
-
-
-  function readURL(myImg){
-    const reader = new FileReader();
-  
-    reader.addEventListener("load", () =>{
-      localStorage.setItem("newImage", reader.result);
-      profilePic.src = reader.result;
-    })
-  
-    reader.readAsDataURL(myImg.files[0]);
-  }

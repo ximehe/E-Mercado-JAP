@@ -24,10 +24,11 @@ if ((data) != 'logueado') {
 
 function SalirSesion(){
 
-    localStorage.setItem("userLog", "");
-        localStorage.setItem("firstName", "");
-        localStorage.setItem("secondName", "");
-        localStorage.setItem("firstlastName", "");
-        localStorage.setItem("secondLastName", "");
-        localStorage.setItem("contactNumber", "");
+        localStorage.removeItem("userLog");
+        localStorage.removeItem("firstName");
+        localStorage.removeItem("secondName");
+        localStorage.removeItem("firstlastName");
+        localStorage.removeItem("secondLastName");
+        localStorage.removeItem("contactNumber");
+        localStorage.removeItem("profilePic");
 }
