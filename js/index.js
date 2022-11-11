@@ -21,3 +21,13 @@ if ((data) != 'logueado') {
 {
     document.getElementById('user').innerHTML=localStorage.getItem('userLog');
 }
+
+function SalirSesion(){
+
+    localStorage.setItem("userLog", "");
+        localStorage.setItem("firstName", "");
+        localStorage.setItem("secondName", "");
+        localStorage.setItem("firstlastName", "");
+        localStorage.setItem("secondLastName", "");
+        localStorage.setItem("contactNumber", "");
+}
