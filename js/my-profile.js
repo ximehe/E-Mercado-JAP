@@ -19,6 +19,12 @@ function guardarCambios(){
         localStorage.setItem("contactNumber", contact.value);
     
     }
+
+    if(!(localStorage.getItem("newImage") === "")){
+        localStorage.setItem("profilePic", localStorage.getItem("newImage"));
+        localStorage.setItem("newImage","");
+      }else{}
+
 }
 
 
@@ -52,4 +58,13 @@ function mostrarDatos(){
 
 
 
-
+  function readURL(myImg){
+    const reader = new FileReader();
+  
+    reader.addEventListener("load", () =>{
+      localStorage.setItem("newImage", reader.result);
+      profilePic.src = reader.result;
+    })
+  
+    reader.readAsDataURL(myImg.files[0]);
+  }
