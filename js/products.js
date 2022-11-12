@@ -5,6 +5,7 @@ const ORDER_DESC_BY_RELEV = "-->"
 let FiltroArray=[];
 let min=0;
 let max=0;
+let keyWord = "";
 
  
 function sortAndShowCategories(criterio, array){
@@ -39,14 +40,22 @@ document.addEventListener("DOMContentLoaded",function (e) {
 })
 })
  
+document.getElementById("keyWords").addEventListener("input", function(){
+    keyWord = document.getElementById("keyWords").value;
+    clearList();
+    showList(FiltroArray);
+  }); 
 
 
+  function clearList(){
+    document.getElementById("info").innerHTML = ""
+  }
 
 function showList(array){
     
     array.forEach(element => {
 
-        if (((min == 0) || (parseInt(element.cost) >= min)) && ((max==0) || (parseInt(element.cost)<= max))){
+        if (((min == 0) || (parseInt(element.cost) >= min)) && ((max==0) || (parseInt(element.cost)<= max)) && ((keyWord == "") || element.name.toLowerCase().includes(keyWord.toLowerCase()))){
             var elementHTML = 
           `
         <div class="col-md-4">
