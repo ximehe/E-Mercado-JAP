@@ -25,28 +25,36 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     
     let elementHTML = `
-        <div class= "row" style="padding-top:10px;">
+
+
+
+
+
+    
+        
             
         
             <h1 >${product.name}</h1>
             <hr class="my-3">
-            <div id="imgGallery" class="col-1 m-1"> 
-            <br>
-            </div>
-              <div class="col-6"> 
+            
+              
               <br>
 
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-             <div class="carousel-item active">
-            <img id="MostrarImg" src="${product.images[0]}" class="d-block w-100">
+             <div class="carousel-item active">       
+            <img  id="MostrarImg" src="${product.images[0]}" class="d-block w-100" >
              </div>
              <div class="carousel-item">
-            <img id="MostrarImg" src="${product.images[1]}" class="d-block w-100">
+            <img  id="MostrarImg" src="${product.images[1]}" class="d-block w-100" >
              </div>
              <div class="carousel-item">
-               <img id="MostrarImg" src="${product.images[2]}" class="d-block w-100">
+            <img  id="MostrarImg" src="${product.images[2]}" class="d-block w-100" >
              </div>
+             <div class="carousel-item">
+            <img  id="MostrarImg" src="${product.images[3]}" class="d-block w-100" >
+             </div>
+             
               </div>
              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () =>{
              <span class="visually-hidden">Next</span>
               </button>
                 </div>
-
-                <a href="${product.images[0]}" target="_blank"><img id="MostrarImg" style="width:100%; " src="${product.images[0]}"></a>
+                <div class= "row" style="padding-top:10px;">
                 <br>
                 <br>
                 <strong>${product.name}</strong>
@@ -72,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 <p><strong>Vendidos: </strong> ${product.soldCount}</p>
               
                 <hr class="my-3">
-              </div>
+              
   
               
         </div>
@@ -80,23 +87,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     
       document.getElementById("InfoProducto").innerHTML += elementHTML;
   
-    //Agregar las otras fotos
-      for (let k=0; k< product.images.length;k++){
-        document.getElementById("imgGallery").innerHTML += `<a href="#"><img onclick="cambioImg(${k})" style="width:100%; padding:2px; border: 1px solid #ddd; " src="${product.images[k]}"></a>
-        <style>
-          img:hover {
-            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-          }
-        </style>`
-      }
-  
+   
   }
 
-  //Funcion para cambiar imagen pequeña a grande
-  function cambioImg(k){
-    console.log(product.images[k])
-    document.getElementById("MostrarImg").src = product.images[k]
-  }
+ 
   
   //Funcion para añadir estrellas
   function añadirEstrellas(score){
