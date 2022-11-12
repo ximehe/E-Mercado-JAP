@@ -6,7 +6,7 @@ let email = document.getElementById("email");
 let contact = document.getElementById("contactNumber");
 let profilePic = document.getElementById("profilePic");
 
-profilePic.src="img/img_perfil.png"
+profilePic.src="https://github.com/ximehe/ximehe.github.io/blob/ac8c5d0838dc08893c34c1d55917056b99ef2c08/img/img_perfil.png"
 console.log(profilePic);
 
 function guardarCambios(){
