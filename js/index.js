@@ -13,22 +13,5 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-let data = sessionStorage.getItem('clave')
-if ((data) != 'logueado') {
-    
-    window.location ="login.html"
-}  else
-{
-    document.getElementById('user').innerHTML=localStorage.getItem('userLog');
-}
 
-function SalirSesion(){
 
-        localStorage.removeItem("userLog");
-        localStorage.removeItem("firstName");
-        localStorage.removeItem("secondName");
-        localStorage.removeItem("firstlastName");
-        localStorage.removeItem("secondLastName");
-        localStorage.removeItem("contactNumber");
-        localStorage.removeItem("profilePic");
-}

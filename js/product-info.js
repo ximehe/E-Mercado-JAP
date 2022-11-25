@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 
                 <p><strong>Vendidos: </strong> ${product.soldCount}</p>
               
+                <button type="button" class="btn btn-dark" id="AñadirCompra">Añadir al carrito</button>
                 <hr class="my-3">
               
   
