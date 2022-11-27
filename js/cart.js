@@ -56,7 +56,7 @@ document.getElementById("ListC").innerHTML = elementHTML;
 
 function CalculoDeSubtotal(productId,productCost){
 
-  document.getElementById("subtotal"+productId).innerHTML = (productCost * document.getElementById("cantArticulo"+productId).value);
+  document.getElementById("subtotal"+productId).innerHTML = "USD " + (productCost * document.getElementById("cantArticulo"+productId).value);
 
   CalculoDeEnvio();
   
@@ -75,6 +75,7 @@ function CalculoDeEnvio(){
   }
   CalculoDeTotal()
 }
+
 
 function CalculoDeTotal(){
 
@@ -116,6 +117,12 @@ function MetodoDePago(){
   checkModal();
   MensajeDeExito();
   
+}
+
+//VACIAR CARRITO
+function vaciarCarrito(){
+  localStorage.setItem('myCart', "");
+  location.reload();
 }
 
 function checkModal(){

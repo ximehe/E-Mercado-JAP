@@ -69,28 +69,30 @@
         </thead>
         <tbody id="ListC">
         </tbody>
+        
       </table>
+      <button type="button" class="btn btn-info" onclick="vaciarCarrito()">Vaciar Carrito</button>
       <hr>
 
     
       <h2>Tipo de envío</h2><br>
       <input type="radio" 
         class="form-check-input position-static"
-        value="premium"
+        value="0.15"
         id="premium"
         name="radio" onclick="CalculoDeEnvio()">
          Premium 2 a 5 días (15%)
       </input><br>
       <input type="radio" 
         class="form-check-input position-static"
-        value="express"
+        value="0.07"
         id="express"
         name="radio" onclick="CalculoDeEnvio()">
          Express 5 a 8 días (7%)
         </input><br>
       <input type="radio" 
         class="form-check-input position-static"
-        value="standard"
+        value="0.05"
         id="standard"
         name="radio" onclick="CalculoDeEnvio()" checked> 
         Standard 12 a 15 días (5%)
