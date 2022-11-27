@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 
                 <p><strong>Vendidos: </strong> ${product.soldCount}</p>
               
-                <button type="button" class="btn btn-dark" id="AñadirCompra">Añadir al carrito</button>
+                <button type="button" class="btn btn-dark" onclick="añadirCompra()" ">Añadir al carrito</button>
                 <hr class="my-3">
               
   
@@ -92,7 +92,27 @@ document.addEventListener("DOMContentLoaded", () =>{
   }
 
  
+
+  function añadirCompra(){
+
+    let estaEnCarrito=false;
+
+    if(localStorage.getItem("Carrito")){
+      //Si ya esta en el carro
+      estaEnCarrito=true;
+    } else {
+      //Si no está en el carro
+      estaEnCarrito=true;
+      let productObject={id: product.id , name: product.name, unitCost: product.cost, count: 1 , currency: product.currency, image: product.images[0]};
+      listCarr=[];
+      listCarr = listCarr.concat(productObject);
+      localStorage.setItem('Carrito', JSON.stringify(listCarr));
+    }
+
   
+  }
+
+
   //Funcion para añadir estrellas
   function añadirEstrellas(score){
     let starCount= 0;

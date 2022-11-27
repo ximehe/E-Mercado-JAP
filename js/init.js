@@ -59,3 +59,12 @@ if ((data) != 'logueado') {
 {
     document.getElementById('user').innerHTML=localStorage.getItem('userLog');
 }
+
+
+let listCarr=[];
+
+ function loadLocalStorageCart(){
+  let array = localStorage.getItem('myCart');
+  array = JSON.parse(array);
+  return array;
+}

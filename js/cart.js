@@ -12,10 +12,15 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data =>{
   
   
-      carrito=data;
+      if(localStorage.getItem("myCart")){
+        carrito = data.articles.concat(loadLocalStorageCart());
+      } else{carrito = data.articles}
+
+
+      console.log(carrito);
       MostrarArticulo(carrito);
       
-      CalculoDeSubtotal();
+      
       
       
       
@@ -24,37 +29,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
 
-  function MostrarArticulo() {
-    precio = carrito.articles[0].unitCost
+  function MostrarArticulo(productos) {
 
-    let elementHTML = `
+    // precio = carrito.articles[0].unitCost
+    let elementHTML= "";
+
+    for(i=0; i<productos.length; i++){
+    elementHTML += `
           <tr>
             <th scope="row">
-                <img class="img-thumbnail" width=150rem src="${carrito.articles[0].image}"/>
+                <img class="img-thumbnail" width=150rem src="${carrito[i].image}"/>
             </th>
-            <td>${carrito.articles[0].name}</td>
-            <td>${carrito.articles[0].currency} ${precio}</td>
+            <td>${carrito[i].name}</td>
+            <td>${carrito[i].currency} ${carrito[i].unitCost}</td>
             <td>
                 <div class="form-group col">
-                <input class="text-center" type="number" id="cantArticulo" value="1" min="1" max="100" onchange="CalculoDeSubtotal()">
+                <input class="text-center" type="number" id="cantArticulo${carrito[i].id}" value=${carrito[i].count} min="1" max="100" onchange="CalculoDeSubtotal(${carrito[i].id},${carrito[i].currency,carrito[i].unitCost})">
                 </div>
            </td>
-            <td id="subtotal">${carrito.articles[0].currency} ${precio}</td>
+            <td id="subtotal${carrito[i].id}">${carrito[i].currency} ${carrito[i].unitCost}</td>
           </tr>
-    `
+          `
+        }    
 document.getElementById("ListC").innerHTML = elementHTML;
 }
 
-function CalculoDeSubtotal(){
+function CalculoDeSubtotal(productId,productCost){
 
-  
-  subTotal= precio * document.getElementById("cantArticulo").value 
-
-  document.getElementById("subtotal").innerHTML=  "USD" + " " + subTotal;
-  document.getElementById("subtotalcosto").innerHTML=  "USD" + " " + subTotal;
+  document.getElementById("subtotal"+productId).innerHTML = (productCost * document.getElementById("cantArticulo"+productId).value);
 
   CalculoDeEnvio();
-
   
 }
 
